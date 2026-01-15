@@ -10,6 +10,11 @@
     };
 
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+
+    modpack = {
+      url = "git+ssh://git@github.com/fliplus/omw-server-modpack";
+      flake = false;
+    };
   };
 
   outputs = { nixpkgs, ... } @ inputs: {

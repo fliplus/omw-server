@@ -54,6 +54,22 @@
         "type": "github"
       }
     },
+    "modpack": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1768399189,
+        "narHash": "sha256-ETBMPLgJNYInYBCvuRiBxbqCeOLvQ0XY6bPD39u/lN8=",
+        "ref": "refs/heads/main",
+        "rev": "eca5c0f1dc4cf7bded3e634424d113d8ffcd4361",
+        "revCount": 8,
+        "type": "git",
+        "url": "ssh://git@github.com/fliplus/omw-server-modpack"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@github.com/fliplus/omw-server-modpack"
+      }
+    },
     "nix-minecraft": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -92,11 +108,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1768127708,
-        "narHash": "sha256-1Sm77VfZh3mU0F5OqKABNLWxOuDeHIlcFjsXeeiPazs=",
+        "lastModified": 1768305791,
+        "narHash": "sha256-AIdl6WAn9aymeaH/NvBj0H9qM+XuAuYbGMZaP0zcXAQ=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "ffbc9f8cbaacfb331b6017d5a5abb21a492c9a38",
+        "rev": "1412caf7bf9e660f2f962917c14b1ea1c3bc695e",
         "type": "github"
       },
       "original": {
@@ -109,6 +125,7 @@
     "root": {
       "inputs": {
         "disko": "disko",
+        "modpack": "modpack",
         "nix-minecraft": "nix-minecraft",
         "nixpkgs": "nixpkgs_2"
       }
