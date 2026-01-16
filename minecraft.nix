@@ -2,7 +2,7 @@
 let
   modpack = pkgs.fetchPackwizModpack {
     src = "${inputs.modpack}";
-    packHash = "sha256-m6qOXwp15iDP0tx72OZAUEVqDq+7KBoLicoeDx33Yuw=";
+    packHash = "sha256-DOi+KIYrhAkkCFN7EIFDflRSQgslbATonhoOEpvwGms=";
   };
 
   minecraftVersion = modpack.manifest.versions.minecraft;
@@ -32,16 +32,27 @@ in
 	      performance = "-XX:+UseZGC -XX:+UseCompactObjectHeaders";
       in "-Xms${memory} -Xmx${memory} ${performance}";
 
-      operators = {
-        fliplus = "e0b16084-50c6-4a09-94ae-7cfa71b4055a";
-      };
-
       symlinks = {
         "mods" = "${modpack}/mods";
       };
 
       files = {
         "config" = "${modpack}/config";
+      };
+
+      operators = {
+        fliplus = "e0b16084-50c6-4a09-94ae-7cfa71b4055a";
+      };
+
+      serverProperties = {
+        difficulty = "hard";
+        initial-enabled-packs = "vanilla,minecart_improvements";
+        max-players = 69;
+        motd = "Now out!";
+        simulation-distance = 8;
+        spawn-protection = 0;
+        sync-chunk-writes = false;
+        view-distance = 10;
       };
     };
   };
